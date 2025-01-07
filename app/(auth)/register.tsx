@@ -21,11 +21,11 @@ export default function SignInScreen() {
 
         console.log(`Email: ${email}, Password: ${password}`);
         Alert.alert("Sign-in", `Email: ${email}, Password: ${password}`);
-       router.push("home")
+       router.push("/home")
 
     };
 
-    const handleSocialLogin = (platform) => {
+    const handleSocialLogin = (platform:string) => {
         console.log(`Authenticated via ${platform}`);
     };
 
@@ -99,7 +99,7 @@ export default function SignInScreen() {
             {/* Go to Register Button */}
             <TouchableOpacity
                 style={[styles.button, styles.secondaryButton]}
-                onPress={() => router.push("login")}
+                onPress={() => router.push("/login")}
             >
                 <Text style={[styles.buttonText, styles.secondaryButtonText]}>Go to Sign In</Text>
             </TouchableOpacity>
